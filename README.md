@@ -1,6 +1,16 @@
 # Bit-By-Bit
 Software Engineering PROJECT
 
+
+# Models used for prediction:
+1. [Decision Tree Model](https://webfocusinfocenter.informationbuilders.com/wfappent/TLs/TL_rstat/source/DecisionTree47.htm)
+2. [KNN MODEL](https://towardsdatascience.com/machine-learning-basics-with-the-k-nearest-neighbors-algorithm-6a6e71d01761)
+3. [Logistic Regression](https://towardsdatascience.com/introduction-to-logistic-regression-66248243c148)
+
+
+
+
+
 # Team:
 <table>
   <tr>
