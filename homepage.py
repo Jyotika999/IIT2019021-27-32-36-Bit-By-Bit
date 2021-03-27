@@ -39,11 +39,11 @@ def app():
     #
     # set_png_as_page_bg('imag1.png')
 
-    main_bg = "imag2.png"
-    main_bg_ext = "imag2.png"
+    main_bg = "back.png"
+    main_bg_ext = "back.png"
 
-    side_bg = "imag2.png"
-    side_bg_ext = "imag2.png"
+    side_bg = "back.png"
+    side_bg_ext = "back.png"
 
     st.markdown(
         f"""
