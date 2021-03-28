@@ -1,4 +1,5 @@
 # homepage.py
+
 import streamlit as st
 import base64
 
@@ -70,4 +71,39 @@ def app():
             """, unsafe_allow_html=True)
 
     st.title('HEPATITIS DATASET ANALYSIS AND VISUALISATION ')
-    st.write('Viral hepatitis is liver inflammation due to a viral infection.It may present in acute form as a recent infection with relatively rapid onset, or in chronic form.')
+    st.subheader('About Hepatitis')
+    st.write(
+        'Viral hepatitis is liver inflammation due to a viral infection.It may present in acute form '
+        'as a recent infection with relatively rapid onset, or in chronic form.'
+        'Hepatitis viruses are the most common cause of hepatitis in the world but other infections, toxic '
+        'substances (e.g. alcohol, certain drugs), and autoimmune diseases can also cause hepatitis.')
+
+    col1, mid, col2 = st.beta_columns([10, 8, 20])
+    with col1:
+        st.image('images/hepatitis1.jpg', width=320)
+    with col2:
+        st.write('There are 5 main hepatitis viruses, referred to as types A, B, C, D and E. These 5 types are of '
+                 'greatest concern because of the burden of illness and death they cause and the potential for '
+                 'outbreaks and epidemic spread. In particular, types B and C lead to chronic disease in hundreds'
+                 'of millions of people and, together, are the most common cause of liver cirrhosis and cancer.')
+    st.write(
+        'Viral hepatitis is liver inflammation due to a viral infection.It may present in acute form '
+        'as a recent infection with relatively rapid onset, or in chronic form.'
+        'Hepatitis viruses are the most common cause of hepatitis in the world but other infections, toxic '
+        'substances (e.g. alcohol, certain drugs), and autoimmune diseases can also cause hepatitis.')
+
+    col1, mid, col2 = st.beta_columns([20, 1, 20])
+    with col2:
+        st.image('images/hepatitisB.jpg', width=320)
+    with col1:
+        st.write('There are 5 main hepatitis viruses, referred to as types A, B, C, D and E. These 5 types are of '
+                 'greatest concern because of the burden of illness and death they cause and the potential for '
+                 'outbreaks and epidemic spread. In particular, types B and C lead to chronic disease in hundreds'
+                 'of millions of people and, together, are the most common cause of liver cirrhosis and cancer.')
+
+    st.subheader('About This app')
+    st.write('This applications aims at analysing the various trends in hepatitis viruses along with their analysis '
+             'and visualisation and EDA analysis. You can also check the possibilities of survival and death of a '
+             'patient by inputing various values of some necessary fields. This application intends to help in '
+             'prediction and plotting correlation matrix along with graphical analysis of data over the past trends, '
+             'in hepatitis patients. It also detects drastic changes in the changing trends of the models.')
