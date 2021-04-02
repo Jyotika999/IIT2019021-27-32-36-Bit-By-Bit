@@ -7,6 +7,8 @@ import homepage
 import change_Detection
 import about_this_project
 import info_About_models
+import correlation_matrix
+import test_with_html
 # import EDUsingPandasProfiling
 import streamlit as st
 
@@ -16,7 +18,9 @@ PAGES = {
     "EDA analysis": app2,
     "Detect Changes": change_Detection,
     "About Models": info_About_models,
-    "About Us": about_this_project
+    "Correlation matrix": correlation_matrix,
+    "About Us": about_this_project,
+    "testing with html": test_with_html,
     # "EDA ANALYSIS USING PANDAS PROFILING": EDAusingPandasProfiling,
 }
 st.markdown(

@@ -1,6 +1,8 @@
 # homepage.py
 import streamlit as st
 import base64
+import warnings
+warnings.filterwarnings("ignore")
 
 
 def app():
