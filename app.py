@@ -9,8 +9,20 @@ import about_this_project
 import info_About_models
 import correlation_matrix
 import test_with_html
+import html_profiling
 # import EDUsingPandasProfiling
 import streamlit as st
+import time
+
+
+# Spinner
+with st.spinner("Waiting .."):
+	time.sleep(5)
+
+from PIL import Image
+img = Image.open("images/bacteria.png")
+st.image(img,width=500,caption='Streamlit Images')
+
 
 PAGES = {
     "Home": homepage,
@@ -21,6 +33,7 @@ PAGES = {
     "Correlation matrix": correlation_matrix,
     "About Us": about_this_project,
     "testing with html": test_with_html,
+    "MIXTURE OF HTML, CSS, JS, STREAMLIT": html_profiling
     # "EDA ANALYSIS USING PANDAS PROFILING": EDAusingPandasProfiling,
 }
 st.markdown(
