@@ -8,7 +8,17 @@ import altair as alt
 
 
 def app():
-    st.header('Change in Trends and Values')
+    @st.cache(allow_output_mutation=True)
+    def get_base64_of_bin_file(bin_file):
+        with open(bin_file, 'rb') as f:
+            data = f.read()
+        return base64.b64encode(data).decode()
+
+    main_bg = "back.png"
+    main_bg_ext = "back.png"
+
+    st.markdown("<h1 style='text-align: center; color: #7b113a;'>Change in Trends and Values</h1>",
+                unsafe_allow_html=True)
     st.subheader('About')
     st.write('On the test data when a change is encountered which does not follow the regular flow in th pattern'
              'this show the pop up message accordingly')
@@ -54,11 +64,14 @@ def app():
 
     st.altair_chart(c, use_container_width=True)
 
-    st.markdown("""
-        <style>
-        body {
-            color: #F5F5F5;
-            background-color: #b19cd9;
-        }
-        </style>
-            """, unsafe_allow_html=True)
+    st.markdown(
+        f"""
+                  <style>
+                  .reportview-container {{
+                      background: url(data:image/{main_bg_ext};base64,{base64.b64encode(open(main_bg, "rb").read()).decode()})
+                  }}
+
+                  </style>
+                  """,
+        unsafe_allow_html=True
+    )

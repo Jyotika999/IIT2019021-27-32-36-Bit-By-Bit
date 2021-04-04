@@ -11,11 +11,23 @@ import numpy as np
 import seaborn as sns
 import tkinter
 import base64
+import streamlit.components.v1 as components
+
 import warnings
 warnings.filterwarnings("ignore")
 
 
 def app():
+    @st.cache(allow_output_mutation=True)
+    def get_base64_of_bin_file(bin_file):
+        with open(bin_file, 'rb') as f:
+            data = f.read()
+        return base64.b64encode(data).decode()
+
+    main_bg = "back.png"
+    main_bg_ext = "back.png"
+
+
     df = pd.read_csv("hepatitis.csv")
     df_split = np.array_split(df, 30)
     attribute_name = st.sidebar.selectbox("SELECT ATTRIBUTE", ("age", "sex", "steroid", "antivirals", "fatigue", "malaise", "anorexia", "liver_big", "liver_firm", "spleen_palable", "spiders", "ascites","varices","bilirubin","alk_phosphate","sgot","albumin","protime","histology"))
@@ -116,13 +128,15 @@ def app():
 
 
     # changing background color
-    st.markdown("""
-    <style>
-    body {
-        color: 	#F5F5F5;
-        background-color: #b19cd9;
-    }
-    </style>
-        """, unsafe_allow_html=True)
+    st.markdown(
+        f"""
+               <style>
+               .reportview-container {{
+                   background: url(data:image/{main_bg_ext};base64,{base64.b64encode(open(main_bg, "rb").read()).decode()})
+               }}
 
+               </style>
+               """,
+        unsafe_allow_html=True
+    )
 

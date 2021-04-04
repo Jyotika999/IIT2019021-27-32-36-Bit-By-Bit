@@ -48,9 +48,7 @@ def app():
         unsafe_allow_html=True
     )
 
-
-
-    st.title('HEPATITIS DATASET ANALYSIS AND VISUALISATION ')
+    st.markdown("<h1 style='text-align: center; color: #7b113a;'>HEPATITIS DATASET ANALYSIS AND VISUALISATION </h1>", unsafe_allow_html=True)
     st.subheader('About Hepatitis')
     st.write(
         'Viral hepatitis is liver inflammation due to a viral infection.It may present in acute form '

@@ -47,8 +47,8 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
-st.sidebar.image('images/hepatitis2.jpg', width=210)
-st.sidebar.title('HOME PAGE CONTENTS ')
+st.sidebar.image('images/liver-care.png', width=210)
+st.sidebar.title('Welcome ')
 selection = st.sidebar.radio("CONTENTS: ", list(PAGES.keys()))
 page = PAGES[selection]
 page.app()
