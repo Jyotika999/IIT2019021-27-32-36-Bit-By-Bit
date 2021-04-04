@@ -40,7 +40,7 @@ def app():
     st.pyplot(fig)
 
 
-    col1, col2, col3, col4, col5 = st.beta_columns(5)
+    col1, col2, col3 = st.beta_columns(3)
 
     with col1:
 
@@ -54,13 +54,6 @@ def app():
 
         st.image("https://static.streamlit.io/examples/owl.jpg")
 
-    with col4:
-
-        st.image("https://static.streamlit.io/examples/owl.jpg")
-
-    with col5:
-
-        st.image("https://static.streamlit.io/examples/owl.jpg")
 
 
 

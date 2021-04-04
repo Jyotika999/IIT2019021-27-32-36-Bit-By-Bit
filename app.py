@@ -8,20 +8,21 @@ import change_Detection
 import about_this_project
 import info_About_models
 import correlation_matrix
-import test_with_html
+import density_of_each_attr
 import html_profiling
 # import EDUsingPandasProfiling
 import streamlit as st
 import time
+import animated_visualisation
 
 
 # Spinner
 with st.spinner("Waiting .."):
 	time.sleep(5)
 
-from PIL import Image
-img = Image.open("images/bacteria.png")
-st.image(img,width=500,caption='Streamlit Images')
+# from PIL import Image
+# img = Image.open("images/bacteria.png")
+# st.image(img,width=500,caption='Streamlit Images')
 
 
 PAGES = {
@@ -32,8 +33,10 @@ PAGES = {
     "About Models": info_About_models,
     "Correlation matrix": correlation_matrix,
     "About Us": about_this_project,
-    "testing with html": test_with_html,
-    "MIXTURE OF HTML, CSS, JS, STREAMLIT": html_profiling
+    "testing with html": density_of_each_attr,
+    "MIXTURE OF HTML, CSS, JS, STREAMLIT": html_profiling,
+    "Animated Visualisation": animated_visualisation
+
     # "EDA ANALYSIS USING PANDAS PROFILING": EDAusingPandasProfiling,
 }
 st.markdown(
