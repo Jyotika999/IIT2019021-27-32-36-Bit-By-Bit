@@ -13,7 +13,6 @@ import html_profiling
 # import EDUsingPandasProfiling
 import streamlit as st
 import time
-import animated_visualisation
 
 
 # Spinner
@@ -34,8 +33,7 @@ PAGES = {
     "Correlation matrix": correlation_matrix,
     "About Us": about_this_project,
     "testing with html": density_of_each_attr,
-    "MIXTURE OF HTML, CSS, JS, STREAMLIT": html_profiling,
-    "Animated Visualisation": animated_visualisation
+    "MIXTURE OF HTML, CSS, JS, STREAMLIT": html_profiling
 
     # "EDA ANALYSIS USING PANDAS PROFILING": EDAusingPandasProfiling,
 }

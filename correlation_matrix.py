@@ -35,7 +35,7 @@ def app():
     # Plot!
     st.plotly_chart(fig, use_container_width=True)
 
-    st.set_option('deprecation.showPlotGlobalUse', False)
+    # st.set_option('deprecation.showPlotGlobalUse', False)
     st.title("Hepatitis Dataset Correlation Matrix")
     st.write(sns.heatmap(df.corr()))
     st.pyplot()
