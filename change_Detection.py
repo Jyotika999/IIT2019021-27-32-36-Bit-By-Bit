@@ -25,8 +25,10 @@ def app():
     st.markdown("<h1 style='text-align: center; color: #7b113a;'>Change in Trends and Values</h1>",
                 unsafe_allow_html=True)
     st.subheader('About')
-    st.write('On the test data when a change is encountered which does not follow the regular flow in the pattern'
-             ', it shows the pop up message accordingly')
+    st.write('Changes in attribute corresponding to the other attributes and corresponding to the live and '
+             'death percentages. Select the attribute among which the changes are required to be seen from '
+             'the side menu 1st attribute refers to attribute corresponding to the X-axis, and similarly '
+             '2nd attribute refers to the attribute corresponding to the Y-axis ')
 
     dx = pd.read_csv('hepatitis.csv')
     df = pd.DataFrame(
