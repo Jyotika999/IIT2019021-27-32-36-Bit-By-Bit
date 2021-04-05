@@ -8,12 +8,14 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import streamlit as st
 import numpy as np
+import statistics as stat
 import seaborn as sns
 import tkinter
 import base64
 import streamlit.components.v1 as components
 
 import warnings
+
 warnings.filterwarnings("ignore")
 
 
@@ -24,15 +26,15 @@ def app():
             data = f.read()
         return base64.b64encode(data).decode()
 
-    main_bg = "back.png"
-    main_bg_ext = "back.png"
-
-
     df = pd.read_csv("hepatitis.csv")
-    df_split = np.array_split(df, 30)
-    attribute_name = st.selectbox("SELECT ATTRIBUTE", ("age", "sex", "steroid", "antivirals", "fatigue", "malaise", "anorexia", "liver_big", "liver_firm", "spleen_palable", "spiders", "ascites","varices","bilirubin","alk_phosphate","sgot","albumin","protime","histology"))
+    attribute_name = st.sidebar.selectbox("SELECT ATTRIBUTE", (
+    "age", "sex", "steroid", "antivirals", "fatigue", "malaise", "anorexia", "liver_big", "liver_firm",
+    "spleen_palable", "spiders", "ascites", "varices", "bilirubin", "alk_phosphate", "sgot", "albumin", "protime",
+    "histology"))
     st.title("Histogram Plot for " + attribute_name);
 
+    n = 30
+    final = [df[i * n:(i + 1) * n] for i in range((len(df) + n - 1) // n)]
     st.subheader("Entire Data Set")
     fig, ax = plt.subplots()
     df.hist(
@@ -46,12 +48,17 @@ def app():
         ax=ax,
     )
     st.write(fig)
-    st.write("X-axis: " + attribute_name + " groups")
-    st.write("Y-axis: number of people")
+    col1, col2 = st.beta_columns(2)
+    col1.write("X-axis: " + attribute_name )
+    col2.write("Y-axis: number of people")
+    #st.write("X-axis: " + attribute_name + "Y-axis: number of people")
+    col1.write("Mean: " + str(stat.mean(df[attribute_name])))
+    col2.write(" Variance: " + str(stat.variance(df[attribute_name])))
+    col1.write(" Standard Deviation: "+str(stat.stdev(df[attribute_name])))
 
     st.subheader("For Chunks")
     fig1, ax1 = plt.subplots()
-    df_split[0].hist(
+    final[0].hist(
         bins=8,
         column=attribute_name,
         grid=False,
@@ -62,11 +69,16 @@ def app():
         ax=ax1,
     )
     st.write(fig1)
-    st.write("X-axis: " + attribute_name + " groups")
-    st.write("Y-axis: percentage of people")
+    col1, col2 = st.beta_columns(2)
+    col1.write("X-axis: " + attribute_name)
+    col2.write("Y-axis: number of people")
+    # st.write("X-axis: " + attribute_name + "Y-axis: number of people")
+    col1.write("Mean: " + str(stat.mean(final[0][attribute_name])))
+    col2.write(" Variance: " + str(stat.variance(final[0][attribute_name])))
+    col1.write(" Standard Deviation: " + str(stat.stdev(final[0][attribute_name])))
 
     fig2, ax2 = plt.subplots()
-    df_split[1].hist(
+    final[1].hist(
         bins=8,
         column=attribute_name,
         grid=False,
@@ -77,11 +89,16 @@ def app():
         ax=ax2,
     )
     st.write(fig2)
-    st.write("X-axis: " + attribute_name + " groups")
-    st.write("Y-axis: percentage of people")
+    col1, col2 = st.beta_columns(2)
+    col1.write("X-axis: " + attribute_name)
+    col2.write("Y-axis: number of people")
+    # st.write("X-axis: " + attribute_name + "Y-axis: number of people")
+    col1.write("Mean: " + str(stat.mean(final[1][attribute_name])))
+    col2.write(" Variance: " + str(stat.variance(final[1][attribute_name])))
+    col1.write(" Standard Deviation: " + str(stat.stdev(final[1][attribute_name])))
 
     fig3, ax3 = plt.subplots()
-    df_split[2].hist(
+    final[2].hist(
         bins=8,
         column=attribute_name,
         grid=False,
@@ -92,11 +109,16 @@ def app():
         ax=ax3,
     )
     st.write(fig3)
-    st.write("X-axis: " + attribute_name + " groups")
-    st.write("Y-axis: percentage of people")
+    col1, col2 = st.beta_columns(2)
+    col1.write("X-axis: " + attribute_name)
+    col2.write("Y-axis: number of people")
+    # st.write("X-axis: " + attribute_name + "Y-axis: number of people")
+    col1.write("Mean: " + str(stat.mean(final[2][attribute_name])))
+    col2.write(" Variance: " + str(stat.variance(final[2][attribute_name])))
+    col1.write(" Standard Deviation: " + str(stat.stdev(final[2][attribute_name])))
 
     fig4, ax4 = plt.subplots()
-    df_split[3].hist(
+    final[3].hist(
         bins=8,
         column=attribute_name,
         grid=False,
@@ -107,11 +129,16 @@ def app():
         ax=ax4,
     )
     st.write(fig4)
-    st.write("X-axis: " + attribute_name + " groups")
-    st.write("Y-axis: percentage of people")
+    col1, col2 = st.beta_columns(2)
+    col1.write("X-axis: " + attribute_name)
+    col2.write("Y-axis: number of people")
+    # st.write("X-axis: " + attribute_name + "Y-axis: number of people")
+    col1.write("Mean: " + str(stat.mean(final[3][attribute_name])))
+    col2.write(" Variance: " + str(stat.variance(final[3][attribute_name])))
+    col1.write(" Standard Deviation: " + str(stat.stdev(final[3][attribute_name])))
 
     fig5, ax5 = plt.subplots()
-    df_split[4].hist(
+    final[4].hist(
         bins=8,
         column=attribute_name,
         grid=False,
@@ -123,9 +150,13 @@ def app():
         ax=ax5,
     )
     st.write(fig5)
-    st.write("X-axis: " + attribute_name + " groups")
-    st.write("Y-axis: percentage of people")
-
+    col1, col2 = st.beta_columns(2)
+    col1.write("X-axis: " + attribute_name)
+    col2.write("Y-axis: number of people")
+    # st.write("X-axis: " + attribute_name + "Y-axis: number of people")
+    col1.write("Mean: " + str(stat.mean(final[4][attribute_name])))
+    col2.write(" Variance: " + str(stat.variance(final[4][attribute_name])))
+    col1.write(" Standard Deviation: " + str(stat.stdev(final[4][attribute_name])))
 
     # changing background color
     st.markdown(
@@ -142,4 +173,3 @@ background: linear-gradient(to right, #5FC3E4, #E55D87); /* W3C, IE 10+/ Edge, F
                """,
         unsafe_allow_html=True
     )
-
