@@ -20,8 +20,8 @@ def app():
     st.markdown("<h1 style='text-align: center; color: #7b113a;'>Change in Trends and Values</h1>",
                 unsafe_allow_html=True)
     st.subheader('About')
-    st.write('On the test data when a change is encountered which does not follow the regular flow in th pattern'
-             'this show the pop up message accordingly')
+    st.write('On the test data when a change is encountered which does not follow the regular flow in the pattern'
+             ', it shows the pop up message accordingly')
 
     dx = pd.read_csv('hepatitis.csv')
     df = pd.DataFrame(

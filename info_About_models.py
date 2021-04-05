@@ -70,6 +70,21 @@ def app():
     }
         </style>
             """, unsafe_allow_html=True)
-
-    st.title('info about models')
-    st.write('add info about three models we have used for prediction')
+    st.markdown("<h1 style='text-align: center; color: #7b113a;'>Models Used:</h1>",
+                unsafe_allow_html=True)
+    # st.title('Models used:')
+    # st.write('add info about three models we have used for prediction')
+    st.write('Decision Tree Model: A decision tree is a machine learning algorithm that partitions the data into subsets.'
+             'The partitioning process starts with a binary split and continues until no further splits can be made.' 
+             'Various branches of variable length are formed. The several steps involved are: Splitting, Pruning and Tree Selection.')
+    st.write('\n')
+    st.write('KNN Model: The k-nearest neighbors (KNN) algorithm is a simple, easy-to-implement supervised machine learning algorithm' ''
+             'that can be used to solve both classification and regression problems. Steps involed are:')
+    st.write('Load the data, Initialize K to your chosen number of neighbors, For each example in the data,' 
+             'Calculate the distance between the query example and the current example from the data, Add the distance' 
+             'and the index of the example to an ordered collection,  Sort the ordered collection of distances and indices' 
+             'from smallest to largest (in ascending order) by the distances, Pick the first K entries from the sorted collection,' 
+             'Get the labels of the selected K entries, If regression, return the mean of the K labels, If classification, return the mode of the K labels.')
+    st.write('\n')
+    st.write('Logistic Regression: Logistic Regression is a Machine Learning algorithm which is used for the classification problems,' 
+             'it is a predictive analysis algorithm and based on the concept of probability.')
