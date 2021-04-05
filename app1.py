@@ -30,7 +30,7 @@ def app():
 
     df = pd.read_csv("hepatitis.csv")
     df_split = np.array_split(df, 30)
-    attribute_name = st.sidebar.selectbox("SELECT ATTRIBUTE", ("age", "sex", "steroid", "antivirals", "fatigue", "malaise", "anorexia", "liver_big", "liver_firm", "spleen_palable", "spiders", "ascites","varices","bilirubin","alk_phosphate","sgot","albumin","protime","histology"))
+    attribute_name = st.selectbox("SELECT ATTRIBUTE", ("age", "sex", "steroid", "antivirals", "fatigue", "malaise", "anorexia", "liver_big", "liver_firm", "spleen_palable", "spiders", "ascites","varices","bilirubin","alk_phosphate","sgot","albumin","protime","histology"))
     st.title("Histogram Plot for " + attribute_name);
 
     st.subheader("Entire Data Set")

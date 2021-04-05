@@ -20,8 +20,14 @@ def app():
     st.markdown("<h1 style='text-align: center; color: #7b113a;'>Change in Trends and Values</h1>",
                 unsafe_allow_html=True)
     st.subheader('About')
-    st.write('On the test data when a change is encountered which does not follow the regular flow in the pattern'
-             ', it shows the pop up message accordingly')
+    st.markdown("""
+       <style>
+       .big-font {
+           font-size:20px !important;
+       }
+       </style>
+       """, unsafe_allow_html=True)
+    st.markdown('<p class="big-font">On the test data when a change is encountered which does not follow the regular flow in the pattern, it shows the pop up message accordingly</p>', unsafe_allow_html=True)
 
     dx = pd.read_csv('hepatitis.csv')
     df = pd.DataFrame(
