@@ -70,4 +70,5 @@ def app():
             """, unsafe_allow_html=True)
 
     st.title('ABOUT OUR SOFTWARE ')
-    st.write('ADD MORE DETAILS ABOUT WHAT OUR PROJECT CAN DO')
+    # st.write('ADD MORE DETAILS ABOUT WHAT OUR PROJECT CAN DO')
+    st.write('Our software is made for the sole purpose of contributing to the medical field. It provides analysis and visualization of the previous trends of hepatitis disease seen in patients of different age, gender and various other attributes like intake of antivirals, steroid etc. It detects changes and gives pop up notifications in the previous trends. It also displays correlation matrix for various attributes.\n\n\n\nThis app is a collaboration work of Jyotika, Vidushi, Aarushi and Medha from IIIT Allahabad.')
