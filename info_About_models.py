@@ -51,7 +51,10 @@ def app():
         f"""
         <style>
         .reportview-container {{
-            background: url(data:image/{main_bg_ext};base64,{base64.b64encode(open(main_bg, "rb").read()).decode()})
+            background: #E55D87;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #5FC3E4, #E55D87);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #5FC3E4, #E55D87); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
         }}
        .sidebar .sidebar-content {{
             background: url(data:image/{side_bg_ext};base64,{base64.b64encode(open(side_bg, "rb").read()).decode()})
@@ -70,7 +73,7 @@ def app():
     }
         </style>
             """, unsafe_allow_html=True)
-    st.markdown("<h1 style='text-align: center; color: #7b113a;'>Models Used:</h1>",
+    st.markdown("<h1 style='text-align: center; color: #7b113a;'>Models Used</h1>",
                 unsafe_allow_html=True)
     # st.title('Models used:')
     # st.write('add info about three models we have used for prediction')

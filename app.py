@@ -32,7 +32,7 @@ PAGES = {
     "About Models": info_About_models,
     "Correlation matrix": correlation_matrix,
     "About Us": about_this_project,
-    "testing with html": density_of_each_attr,
+    "Density of attributes": density_of_each_attr,
     "MIXTURE OF HTML, CSS, JS, STREAMLIT": html_profiling
 
     # "EDA ANALYSIS USING PANDAS PROFILING": EDAusingPandasProfiling,

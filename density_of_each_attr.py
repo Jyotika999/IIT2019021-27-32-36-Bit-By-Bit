@@ -32,7 +32,7 @@ def app():
     plt.show()
     components.html(
         """
-      <h1 style='text-align: center; color: #7b113a;'> Density of each attribute </h1>
+      <h1 style='text-align: center; color: #7b113a; font-size: 3rem'> Density of each attribute </h1>
         """
     )
 
@@ -44,15 +44,15 @@ def app():
 
     with col1:
 
-        st.image("https://static.streamlit.io/examples/owl.jpg")
+        st.image('images/bacteria.png', width=220)
 
     with col2:
 
-        st.image("https://static.streamlit.io/examples/owl.jpg")
+        st.image('images/virus (2).png', width=220)
 
     with col3:
 
-        st.image("https://static.streamlit.io/examples/owl.jpg")
+        st.image('images/bacteria.png', width=220)
 
 
 
@@ -66,8 +66,10 @@ def app():
         """
         <style>
         .reportview-container {
-            background: rgb(29,218,73);
-background: linear-gradient(90deg, rgba(29,218,73,1) 0%, rgba(0,212,255,1) 100%);
+            background: #E55D87;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #5FC3E4, #E55D87);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #5FC3E4, #E55D87); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
         }
        .sidebar .sidebar-content {
             
