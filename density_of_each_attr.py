@@ -9,6 +9,8 @@ import base64
 import warnings
 warnings.filterwarnings("ignore")
 import streamlit.components.v1 as components
+from PIL import Image
+
 
 def app():
 
@@ -35,7 +37,8 @@ def app():
       <h1 style='text-align: center; color: #7b113a; font-size: 3rem'> Density of each attribute </h1>
         """
     )
-
+    img = Image.open("images/hepatitis1.jpg")
+    st.image(img, width=700, caption='hepatitis')
 
     st.pyplot(fig)
 

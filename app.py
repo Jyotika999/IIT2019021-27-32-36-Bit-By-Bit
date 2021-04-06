@@ -24,18 +24,18 @@ with st.spinner("Waiting .."):
 # img = Image.open("images/bacteria.png")
 # st.image(img,width=500,caption='Streamlit Images')
 
-
 PAGES = {
     "Home": homepage,
-    "Visualisation ": app1,
-    "EDA analysis": app2,
-    "Detect Changes": change_Detection,
-    "About Models": info_About_models,
+    "Data Visualisation ": app1,
+    #"EDA analysis": app2,
+    "Change Detection on attributes": change_Detection,
     "Correlation matrix": correlation_matrix,
-    #"Mortality Prediction": predict,
-    "About Us": about_this_project,
     "Density of attributes": density_of_each_attr,
-    "MIXTURE OF HTML, CSS, JS, STREAMLIT": html_profiling
+    "Profiling of Dataset": html_profiling,
+    #"Mortality Prediction": predict,
+    "Models used": info_About_models,
+    "About Team: Bit By Bit": about_this_project,
+
 
     # "EDA ANALYSIS USING PANDAS PROFILING": EDAusingPandasProfiling,
 }
@@ -51,7 +51,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 st.sidebar.image('images/liver-care.png', width=210)
-st.sidebar.title('Welcome ')
+st.sidebar.title('Hepatitis Analysis ')
 selection = st.sidebar.radio("CONTENTS: ", list(PAGES.keys()))
 page = PAGES[selection]
 page.app()

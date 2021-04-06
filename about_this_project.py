@@ -47,6 +47,8 @@ def app():
 
     st.markdown(
         f"""
+
+       
         <style>
         .reportview-container {{
             background: #E55D87;  /* fallback for old browsers */
@@ -54,9 +56,7 @@ background: -webkit-linear-gradient(to right, #5FC3E4, #E55D87);  /* Chrome 10-2
 background: linear-gradient(to right, #5FC3E4, #E55D87); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
         }}
-       .sidebar .sidebar-content {{
-            background: url(data:image/{side_bg_ext};base64,{base64.b64encode(open(side_bg, "rb").read()).decode()})
-        }}
+       
         </style>
         """,
         unsafe_allow_html=True
@@ -81,17 +81,18 @@ background: linear-gradient(to right, #5FC3E4, #E55D87); /* W3C, IE 10+/ Edge, F
              'analysis on hepatitis data set. For further information on this application visit the home page '
              '\n\n\n\n**HAVE A NICE DAY :)**\n\n\n\n** Thanks For Visiting** ')
     st.subheader('**TEAM MEMBERS**')
+
     col1, col2, col3, col4 = st.beta_columns(4)
-    col1.image('https://avatars.githubusercontent.com/u/54600270?v=4', width = 150)
+    col1.image('https://avatars.githubusercontent.com/u/54600270?v=4', width = 250)
     col1.write('Jyotika')
     col1.write('[Github](https://github.com/Jyotika999)')
-    col2.image('https://avatars.githubusercontent.com/u/58432166?v=4', width=150)
+    col2.image('https://avatars.githubusercontent.com/u/58432166?v=4', width=250)
     col2.write('Vidushi')
     col2.write('[Github](https://github.com/vidushi1012)')
-    col3.image('https://avatars.githubusercontent.com/u/58389098?v=4', width=150)
+    col3.image('https://avatars.githubusercontent.com/u/58389098?v=4', width=250)
     col3.write('Aarushi')
     col3.write('[Github](https://github.com/shee35)')
-    col4.image('https://avatars.githubusercontent.com/u/58399279?v=4', width=150)
+    col4.image('https://avatars.githubusercontent.com/u/58399279?v=4', width=250)
     col4.write('Medha')
     col4.write('[Github](https://github.com/medhabalani)')
 
