@@ -35,7 +35,7 @@ def app():
 
     n = 30
     final = [df[i * n:(i + 1) * n] for i in range((len(df) + n - 1) // n)]
-    st.subheader("Entire Data Set")
+    st.subheader("**ENTIRE DATA SET**")
     fig, ax = plt.subplots()
     df.hist(
         bins=8,
@@ -49,14 +49,14 @@ def app():
     )
     st.write(fig)
     col1, col2 = st.beta_columns(2)
-    col1.write("X-axis: " + attribute_name )
-    col2.write("Y-axis: number of people")
+    col1.write("**X-axis: **" + attribute_name )
+    col2.write("**Y-axis:** number of people")
     #st.write("X-axis: " + attribute_name + "Y-axis: number of people")
-    col1.write("Mean: " + str(stat.mean(df[attribute_name])))
-    col2.write(" Variance: " + str(stat.variance(df[attribute_name])))
-    col1.write(" Standard Deviation: "+str(stat.stdev(df[attribute_name])))
+    col1.write("**Mean: **" + str(stat.mean(df[attribute_name])))
+    col2.write(" **Variance: **" + str(stat.variance(df[attribute_name])))
+    col1.write("** Standard Deviation:** "+str(stat.stdev(df[attribute_name])))
 
-    st.subheader("For Chunks")
+    st.subheader("**FOR CHUNKS**")
     fig1, ax1 = plt.subplots()
     final[0].hist(
         bins=8,
@@ -70,12 +70,12 @@ def app():
     )
     st.write(fig1)
     col1, col2 = st.beta_columns(2)
-    col1.write("X-axis: " + attribute_name)
-    col2.write("Y-axis: number of people")
+    col1.write("**X-axis:** " + attribute_name)
+    col2.write("**Y-axis:** number of people")
     # st.write("X-axis: " + attribute_name + "Y-axis: number of people")
-    col1.write("Mean: " + str(stat.mean(final[0][attribute_name])))
-    col2.write(" Variance: " + str(stat.variance(final[0][attribute_name])))
-    col1.write(" Standard Deviation: " + str(stat.stdev(final[0][attribute_name])))
+    col1.write("**Mean:** " + str(stat.mean(final[0][attribute_name])))
+    col2.write(" **Variance:** " + str(stat.variance(final[0][attribute_name])))
+    col1.write(" **Standard Deviation: **" + str(stat.stdev(final[0][attribute_name])))
 
     fig2, ax2 = plt.subplots()
     final[1].hist(
@@ -90,12 +90,12 @@ def app():
     )
     st.write(fig2)
     col1, col2 = st.beta_columns(2)
-    col1.write("X-axis: " + attribute_name)
-    col2.write("Y-axis: number of people")
+    col1.write("**X-axis:** " + attribute_name)
+    col2.write("**Y-axis:** number of people")
     # st.write("X-axis: " + attribute_name + "Y-axis: number of people")
-    col1.write("Mean: " + str(stat.mean(final[1][attribute_name])))
-    col2.write(" Variance: " + str(stat.variance(final[1][attribute_name])))
-    col1.write(" Standard Deviation: " + str(stat.stdev(final[1][attribute_name])))
+    col1.write("**Mean: **" + str(stat.mean(final[1][attribute_name])))
+    col2.write(" **Variance:** " + str(stat.variance(final[1][attribute_name])))
+    col1.write(" **Standard Deviation:** " + str(stat.stdev(final[1][attribute_name])))
 
     fig3, ax3 = plt.subplots()
     final[2].hist(
@@ -110,12 +110,12 @@ def app():
     )
     st.write(fig3)
     col1, col2 = st.beta_columns(2)
-    col1.write("X-axis: " + attribute_name)
-    col2.write("Y-axis: number of people")
+    col1.write("**X-axis:** " + attribute_name)
+    col2.write("**Y-axis:** number of people")
     # st.write("X-axis: " + attribute_name + "Y-axis: number of people")
-    col1.write("Mean: " + str(stat.mean(final[2][attribute_name])))
-    col2.write(" Variance: " + str(stat.variance(final[2][attribute_name])))
-    col1.write(" Standard Deviation: " + str(stat.stdev(final[2][attribute_name])))
+    col1.write("**Mean:** " + str(stat.mean(final[2][attribute_name])))
+    col2.write(" **Variance:** " + str(stat.variance(final[2][attribute_name])))
+    col1.write(" **Standard Deviation:** " + str(stat.stdev(final[2][attribute_name])))
 
     fig4, ax4 = plt.subplots()
     final[3].hist(
@@ -130,12 +130,12 @@ def app():
     )
     st.write(fig4)
     col1, col2 = st.beta_columns(2)
-    col1.write("X-axis: " + attribute_name)
-    col2.write("Y-axis: number of people")
+    col1.write("**X-axis:** " + attribute_name)
+    col2.write("**Y-axis:** number of people")
     # st.write("X-axis: " + attribute_name + "Y-axis: number of people")
-    col1.write("Mean: " + str(stat.mean(final[3][attribute_name])))
-    col2.write(" Variance: " + str(stat.variance(final[3][attribute_name])))
-    col1.write(" Standard Deviation: " + str(stat.stdev(final[3][attribute_name])))
+    col1.write("**Mean: **" + str(stat.mean(final[3][attribute_name])))
+    col2.write(" **Variance:** " + str(stat.variance(final[3][attribute_name])))
+    col1.write(" **Standard Deviation:** " + str(stat.stdev(final[3][attribute_name])))
 
     fig5, ax5 = plt.subplots()
     final[4].hist(
@@ -151,12 +151,12 @@ def app():
     )
     st.write(fig5)
     col1, col2 = st.beta_columns(2)
-    col1.write("X-axis: " + attribute_name)
-    col2.write("Y-axis: number of people")
+    col1.write("**X-axis:** " + attribute_name)
+    col2.write("**Y-axis:** number of people")
     # st.write("X-axis: " + attribute_name + "Y-axis: number of people")
-    col1.write("Mean: " + str(stat.mean(final[4][attribute_name])))
-    col2.write(" Variance: " + str(stat.variance(final[4][attribute_name])))
-    col1.write(" Standard Deviation: " + str(stat.stdev(final[4][attribute_name])))
+    col1.write("**Mean: **" + str(stat.mean(final[4][attribute_name])))
+    col2.write(" **Variance:** " + str(stat.variance(final[4][attribute_name])))
+    col1.write(" **Standard Deviation:** " + str(stat.stdev(final[4][attribute_name])))
 
     # changing background color
     st.markdown(

@@ -3,6 +3,7 @@
 import numpy as np
 import pandas as pd
 import streamlit as st
+import seaborn as sns
 import base64
 import altair as alt
 
@@ -24,7 +25,7 @@ def app():
 
     st.markdown("<h1 style='text-align: center; color: #7b113a;'>Change in Trends and Values</h1>",
                 unsafe_allow_html=True)
-    st.subheader('About')
+    st.subheader('**INTRODUCTION**')
     st.write('Changes in attribute corresponding to the other attributes and corresponding to the live and '
              'death percentages. Select the attribute among which the changes are required to be seen from '
              'the side menu 1st attribute refers to attribute corresponding to the X-axis, and similarly '
@@ -40,6 +41,11 @@ def app():
         x=choice1, y=choice2, size='class', color='class', tooltip=[choice1, choice2, 'class'])
 
     st.altair_chart(c, use_container_width=True)
+
+    st.title("Hepatitis Dataset Correlation Matrix")
+    st.write(sns.heatmap(dx.corr()))
+    st.pyplot()
+
 
     st.markdown(
         f"""

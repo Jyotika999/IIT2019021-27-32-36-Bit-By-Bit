@@ -73,7 +73,25 @@ background: linear-gradient(to right, #5FC3E4, #E55D87); /* W3C, IE 10+/ Edge, F
             """, unsafe_allow_html=True)
 
     # st.title('ABOUT OUR SOFTWARE ')
-    st.markdown("<h1 style='text-align: center; color: #7b113a;'>ABOUT THE SOFTWARE</h1>",
+    st.markdown("<h1 style='text-align: center; color: #7b113a;'>ABOUT US</h1>",
                 unsafe_allow_html=True)
     # st.write('ADD MORE DETAILS ABOUT WHAT OUR PROJECT CAN DO')
-    st.write('Our software is made for the sole purpose of contributing to the medical field. It provides analysis and visualization of the previous trends of hepatitis disease seen in patients of different age, gender and various other attributes like intake of antivirals, steroid etc. It detects changes and gives pop up notifications in the previous trends. It also displays correlation matrix for various attributes.\n\n\n\nThis app is a collaboration work of Jyotika, Vidushi, Aarushi and Medha from IIIT Allahabad.')
+    st.write('\n\nThis application is a collaboration work of the below mentioned team from IIIT Allahabad.\n\n'
+             'It is developed as our **Software Engineering** project. This project deals with the visualisation and '
+             'analysis on hepatitis data set. For further information on this application visit the home page '
+             '\n\n\n\n**HAVE A NICE DAY :)**\n\n\n\n** Thanks For Visiting** ')
+    st.subheader('**TEAM MEMBERS**')
+    col1, col2, col3, col4 = st.beta_columns(4)
+    col1.image('https://avatars.githubusercontent.com/u/54600270?v=4', width = 150)
+    col1.write('Jyotika')
+    col1.write('[Github](https://github.com/Jyotika999)')
+    col2.image('https://avatars.githubusercontent.com/u/58432166?v=4', width=150)
+    col2.write('Vidushi')
+    col2.write('[Github](https://github.com/vidushi1012)')
+    col3.image('https://avatars.githubusercontent.com/u/58389098?v=4', width=150)
+    col3.write('Aarushi')
+    col3.write('[Github](https://github.com/shee35)')
+    col4.image('https://avatars.githubusercontent.com/u/58399279?v=4', width=150)
+    col4.write('Medha')
+    col4.write('[Github](https://github.com/medhabalani)')
+

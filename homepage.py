@@ -52,7 +52,7 @@ background: linear-gradient(to right, #5FC3E4, #E55D87); /* W3C, IE 10+/ Edge, F
     )
 
     st.markdown("<h1 style='text-align: center; color: #7b113a;'>HEPATITIS DATASET ANALYSIS AND VISUALISATION </h1>", unsafe_allow_html=True)
-    st.subheader('About Hepatitis')
+    st.subheader('**ABOUT HEPATITIS**')
     st.write(
         'Viral hepatitis is liver inflammation due to a viral infection.It may present in acute form '
         'as a recent infection with relatively rapid onset, or in chronic form.'
@@ -82,9 +82,13 @@ background: linear-gradient(to right, #5FC3E4, #E55D87); /* W3C, IE 10+/ Edge, F
                  'outbreaks and epidemic spread. In particular, types B and C lead to chronic disease in hundreds'
                  'of millions of people and, together, are the most common cause of liver cirrhosis and cancer.')
 
-    st.subheader('About This app')
+    st.subheader('**ABOUT THIS APP**')
     st.write('This applications aims at analysing the various trends in hepatitis viruses along with their analysis '
              'and visualisation and EDA analysis. You can also check the possibilities of survival and death of a '
              'patient by inputing various values of some necessary fields. This application intends to help in '
              'prediction and plotting correlation matrix along with graphical analysis of data over the past trends, '
-             'in hepatitis patients. It also detects drastic changes in the changing trends of the models.')
+             'in hepatitis patients. It also detects drastic changes in the changing trends of the models.\n\n\n'
+             'Our software is made for the sole purpose of contributing to the medical field. It provides analysis '
+             'and visualization of the previous trends of hepatitis disease seen in patients of different age, gender '
+             'and various other attributes like intake of antivirals, steroid etc. It detects changes and gives pop up '
+             'notifications in the previous trends. It also displays correlation matrix for various attributes.')

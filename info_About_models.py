@@ -85,14 +85,15 @@ background: linear-gradient(to right, #5FC3E4, #E55D87); /* W3C, IE 10+/ Edge, F
     """, unsafe_allow_html=True)
     # st.title('Models used:')
     # st.write('add info about three models we have used for prediction')
-    st.markdown('<p class="big-font">KNN Model: The k-nearest neighbors (KNN) algorithm is a simple, easy-to-implement supervised machine learning algorithm that can be used to solve both classification and regression problems. Steps involed are:</p>', unsafe_allow_html=True)
+    st.subheader('**KNN Model:** ')
+    st.markdown('<p class="big-font">The k-nearest neighbors (KNN) algorithm is a simple, easy-to-implement supervised machine learning algorithm that can be used to solve both classification and regression problems. Steps involed are:</p>', unsafe_allow_html=True)
 
     st.write('\n')
 
     st.markdown('<p class = "big-font">Load the data, Initialize K to your chosen number of neighbors, For each example in the data, Calculate the distance between the query example and the current example from the data, Add the distance and the index of the example to an ordered collection,  Sort the ordered collection of distances and indices from smallest to largest (in ascending order) by the distances, Pick the first K entries from the sorted collection, Get the labels of the selected K entries, If regression, return the mean of the K labels, If classification, return the mode of the K labels.</p>', unsafe_allow_html=True)
     st.write('\n')
-
-    st.markdown('<p class="big-font">SVM Model: Support Vector Machine” (SVM) is a supervised machine learning algorithm which can be used for both classification or regression challenges. However,  it is mostly used in classification problems. In the SVM algorithm, we plot each data item as a point in n-dimensional space (where n is number of features you have) with the value of each feature being the value of a particular coordinate. Then, we perform classification by finding the hyper-plane that differentiates the two classes very well.</p>', unsafe_allow_html=True)
+    st.subheader('**SVM Model:** ')
+    st.markdown('<p class="big-font">Support Vector Machine” (SVM) is a supervised machine learning algorithm which can be used for both classification or regression challenges. However,  it is mostly used in classification problems. In the SVM algorithm, we plot each data item as a point in n-dimensional space (where n is number of features you have) with the value of each feature being the value of a particular coordinate. Then, we perform classification by finding the hyper-plane that differentiates the two classes very well.</p>', unsafe_allow_html=True)
     st.write('\n')
-
-    st.markdown('<p class="big-font">Naive Bayed Model: It is a classification technique based on Bayes’ Theorem with an assumption of independence among predictors. In simple terms, a Naive Bayes classifier assumes that the presence of a particular feature in a class is unrelated to the presence of any other feature.Naive Bayes model is easy to build and particularly useful for very large data sets. Along with simplicity, Naive Bayes is known to outperform even highly sophisticated classification methods</p>', unsafe_allow_html=True)
+    st.subheader('**Naive Bayed Model:** ')
+    st.markdown('<p class="big-font">It is a classification technique based on Bayes’ Theorem with an assumption of independence among predictors. In simple terms, a Naive Bayes classifier assumes that the presence of a particular feature in a class is unrelated to the presence of any other feature.Naive Bayes model is easy to build and particularly useful for very large data sets. Along with simplicity, Naive Bayes is known to outperform even highly sophisticated classification methods</p>', unsafe_allow_html=True)

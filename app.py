@@ -4,6 +4,7 @@
 import app1
 import app2
 import homepage
+import predict
 import change_Detection
 import about_this_project
 import info_About_models
@@ -31,6 +32,7 @@ PAGES = {
     "Detect Changes": change_Detection,
     "About Models": info_About_models,
     "Correlation matrix": correlation_matrix,
+    #"Mortality Prediction": predict,
     "About Us": about_this_project,
     "Density of attributes": density_of_each_attr,
     "MIXTURE OF HTML, CSS, JS, STREAMLIT": html_profiling
