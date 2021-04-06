@@ -48,8 +48,8 @@ Attribute information:
 
 <table>
   <tr>
-     <td align="center"><img src="Diagrams/DFD diagram (1).jpg" width="500px;" alt=""/><br /><sub><b>Activity DIAGRAM</b></sub></a><br /></td>
-     <td align="center"><img src="Diagrams/SOE_Activity_diagram.jpeg" width="500px;" alt=""/><br /><sub><b>DFD DIAGRAM</b></sub></a><br /></td>
+     <td align="center"><img src="Diagrams/DFD diagram (1).jpg" width="500px;" alt=""/><br /><sub><b>DFD DIAGRAM</b></sub></a><br /></td>
+     <td align="center"><img src="Diagrams/SOE_Activity_diagram.jpeg" width="500px;" alt=""/><br /><sub><b>ACTIVITY DIAGRAM</b></sub></a><br /></td>
      </tr>
 </table>
 
