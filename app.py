@@ -27,7 +27,7 @@ PAGES = {
     "Data Visualisation ": app1,
     #"EDA analysis": app2,
     "Change Detection on attributes": change_Detection,
-    "Correlation matrix": correlation_matrix,
+    #"Correlation matrix": correlation_matrix,
     "Density of attributes": density_of_each_attr,
     "Profiling of Dataset": html_profiling,
     #"Mortality Prediction": predict,
