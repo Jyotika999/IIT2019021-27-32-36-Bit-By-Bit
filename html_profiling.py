@@ -66,10 +66,7 @@ import sweetviz as sv
 def app():
     """A Simple EDA App with Streamlit Components"""
 
-    # menu = ["Home", "Pandas Profile", "About"]
-    # choice = st.sidebar.selectbox("Menu", menu)
 
-    # if choice == "Pandas Profile":
     st.subheader("**Exploratory Data Analysis on Hepatitis Dataset**")
 
     components.html("""
@@ -241,7 +238,7 @@ def app():
 
     		""")
 
-    df = pd.read_csv("hepatitis.csv")
+    df = pd.read_csv("Dataset/hepatitis.csv")
     st.dataframe(df)
     profile = ProfileReport(df)
     st_profile_report(profile)

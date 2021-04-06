@@ -1,8 +1,3 @@
-# prac.py
-# import streamlit as st
-# def app():
-#     st.title('APP1')
-#     st.write('Welcome to app1')
 
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -26,7 +21,7 @@ def app():
             data = f.read()
         return base64.b64encode(data).decode()
 
-    df = pd.read_csv("hepatitis.csv")
+    df = pd.read_csv("Dataset/hepatitis.csv")
     attribute_name = st.sidebar.selectbox("SELECT ATTRIBUTE", (
     "age", "sex", "steroid", "antivirals", "fatigue", "malaise", "anorexia", "liver_big", "liver_firm",
     "spleen_palable", "spiders", "ascites", "varices", "bilirubin", "alk_phosphate", "sgot", "albumin", "protime",

@@ -5,17 +5,7 @@ import base64
 
 def app():
 
-    #st.markdown("![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)")[image]
 
-    # uploaded_file = st.file_uploader("safety.jpg", type="jpg")
-    #
-    # if uploaded_file is not None:
-    #     # Convert the file to an opencv image.
-    #     file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
-    #     opencv_image = cv2.imdecode(file_bytes, 1)
-    #
-    #     # Now do something with the image! For example, let's display it:
-    #     st.image(opencv_image, channels="BGR")
 
     @st.cache(allow_output_mutation=True)
     def get_base64_of_bin_file(bin_file):
@@ -23,21 +13,7 @@ def app():
             data = f.read()
         return base64.b64encode(data).decode()
 
-    # def set_png_as_page_bg(png_file):
-    #     bin_str = get_base64_of_bin_file(png_file)
-    #     page_bg_img = '''
-    #     <style>
-    #     body {
-    #     background-image: url("data:image/png;base64,%s");
-    #     background-size: cover;
-    #     }
-    #     </style>
-    #     ''' % bin_str
-    #
-    #     st.markdown(page_bg_img, unsafe_allow_html=True)
-    #     return
-    #
-    # set_png_as_page_bg('imag1.png')
+
 
     main_bg = "back.png"
     main_bg_ext = "back.png"
@@ -72,10 +48,10 @@ background: linear-gradient(to right, #5FC3E4, #E55D87); /* W3C, IE 10+/ Edge, F
         </style>
             """, unsafe_allow_html=True)
 
-    # st.title('ABOUT OUR SOFTWARE ')
+
     st.markdown("<h1 style='text-align: center; color: #7b113a;'>ABOUT US</h1>",
                 unsafe_allow_html=True)
-    # st.write('ADD MORE DETAILS ABOUT WHAT OUR PROJECT CAN DO')
+
     st.write('\n\nThis application is a collaboration work of the below mentioned team from IIIT Allahabad.\n\n'
              'It is developed as our **Software Engineering** project. This project deals with the visualisation and '
              'analysis on hepatitis data set. For further information on this application visit the home page '

@@ -20,9 +20,7 @@ import time
 with st.spinner("Waiting .."):
 	time.sleep(5)
 
-# from PIL import Image
-# img = Image.open("images/bacteria.png")
-# st.image(img,width=500,caption='Streamlit Images')
+
 
 PAGES = {
     "Home": homepage,
@@ -37,7 +35,6 @@ PAGES = {
     "About Team: Bit By Bit": about_this_project,
 
 
-    # "EDA ANALYSIS USING PANDAS PROFILING": EDAusingPandasProfiling,
 }
 st.markdown(
     """

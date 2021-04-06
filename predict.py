@@ -111,7 +111,7 @@ def app():
 
             # loaded_model = load_model("models/logistic_regression_model.pkl")
             # 1 Die and 2 Live
-            df = pd.read_csv("hepatitis.csv")
+            df = pd.read_csv("Dataset/hepatitis.csv")
             x = df[['age', 'sex', 'steroid', 'antivirals', 'fatigue', 'spiders', 'ascites', 'varices', 'bilirubin',
                     'alk_phosphate', 'sgot', 'albumin', 'protime', 'histology']]
             feature_names = ['age', 'sex', 'steroid', 'antivirals', 'fatigue', 'spiders', 'ascites', 'varices',

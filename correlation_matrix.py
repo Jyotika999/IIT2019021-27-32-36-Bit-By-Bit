@@ -20,7 +20,7 @@ warnings.filterwarnings("ignore")
 
 def app():
     # Add histogram data
-    df = pd.read_csv("hepatitis.csv")
+    df = pd.read_csv("Dataset/hepatitis.csv")
     #x1 = df["class"].tolist()
     #x2 = df["age"].tolist()
     #x3 = df["sex"].tolist()

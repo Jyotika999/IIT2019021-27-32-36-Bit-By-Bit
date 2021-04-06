@@ -23,7 +23,7 @@ def app():
 
         # bootstrap 4 collapse example
 
-    df = pd.read_csv("hepatitis.csv")
+    df = pd.read_csv("Dataset/hepatitis.csv")
 
     fig = plt.figure(figsize=(12, 18))
     for i in range(len(df.columns)):

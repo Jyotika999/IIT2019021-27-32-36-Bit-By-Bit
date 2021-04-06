@@ -31,7 +31,7 @@ def app():
              'the side menu 1st attribute refers to attribute corresponding to the X-axis, and similarly '
              '2nd attribute refers to the attribute corresponding to the Y-axis ')
 
-    dx = pd.read_csv('hepatitis.csv')
+    dx = pd.read_csv('Dataset/hepatitis.csv')
     df = pd.DataFrame(
         dx,
         columns=[choice1, choice2, 'class']
