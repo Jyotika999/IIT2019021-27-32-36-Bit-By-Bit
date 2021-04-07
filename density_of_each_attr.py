@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import streamlit as st
 import numpy
-import seaborn as sns
+import seaborn as sns; sns.set()
 import tkinter
 import base64
 import warnings
@@ -42,6 +42,10 @@ def app():
 
     st.pyplot(fig)
 
+    st.subheader("**Living and death concentrations over some important attributes**")
+    numerical_class = ['age', 'bilirubin', 'protime', 'albumin', 'alk_phosphate', 'sgot', 'class']
+    pp = sns.pairplot(df[numerical_class], hue="class", palette='winter')
+    st.pyplot(pp)
 
     col1, col2, col3 = st.beta_columns(3)
 
@@ -56,6 +60,7 @@ def app():
     with col3:
 
         st.image('images/bacteria.png', width=220)
+
 
 
 
