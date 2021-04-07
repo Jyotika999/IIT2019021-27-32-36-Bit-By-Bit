@@ -1,4 +1,3 @@
-
 import matplotlib.pyplot as plt
 import pandas as pd
 import streamlit as st
@@ -35,7 +34,7 @@ def app():
     n = 30
     stdev = []
     varn = []
-    meanx =[]
+    meanx = []
     final = [df[i * n:(i + 1) * n] for i in range((len(df) + n - 1) // n)]
     st.subheader("**ENTIRE DATA SET**")
     fig, ax = plt.subplots()
@@ -182,7 +181,7 @@ def app():
 
     st.subheader("**Standard Deviation And Mean Plot**")
     st.write("Here we analyse the mean and standard deviation of chunks corresponding to the entire data set.")
-    arri = np.array([1, 2, 3, 4, 5, 6])
+    arri = np.array([0, 1, 2, 3, 4, 5])
     fig6 = plt.figure()
     plt.plot(arri, stdev, label="SD")
     plt.plot(arri, meanx, label="Mean")
