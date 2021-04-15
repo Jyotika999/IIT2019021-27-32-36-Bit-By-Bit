@@ -68,21 +68,13 @@ def app():
     st.json(result)
     single_sample = np.array(feature_list).reshape(1, -1)
 
-    model_choice = st.selectbox("Select Model", ["LR", "KNN", "DecisionTree"])
-
+    #model_choice = st.selectbox("Select Model", ["LR", "KNN", "DecisionTree"])
+    model_choice = "KNN"
     if st.button("Predict"):
-        if model_choice == "KNN":
-            loaded_model = load_model("model/knn_hepB_model.pkl")
-            prediction = loaded_model.predict(single_sample)
-            pred_prob = loaded_model.predict_proba(single_sample)
-        elif model_choice == "DecisionTree":
-            loaded_model = load_model("model/decision_tree_clf_hepB_model.pkl")
-            prediction = loaded_model.predict(single_sample)
-            pred_prob = loaded_model.predict_proba(single_sample)
-        else:
-            loaded_model = load_model("model/logistic_regression_hepB_model.pkl")
-            prediction = loaded_model.predict(single_sample)
-            pred_prob = loaded_model.predict_proba(single_sample)
+
+        loaded_model = load_model("model/logistic_regression_hepB_model.pkl")
+        prediction = loaded_model.predict(single_sample)
+        pred_prob = loaded_model.predict_proba(single_sample)
 
         # st.write(prediction)
         # prediction_label = {"Die":1,"Live":2}
@@ -100,40 +92,36 @@ def app():
             st.json(pred_probability_score)
 
     if st.checkbox("Interpret"):
-        if model_choice == "KNN":
-            loaded_model = load_model("model/knn_hepB_model.pkl")
 
-        elif model_choice == "DecisionTree":
-            loaded_model = load_model("model/decision_tree_clf_hepB_model.pkl")
+        loaded_model = load_model("model/logistic_regression_hepB_model.pkl")
 
-        else:
-            loaded_model = load_model("model/logistic_regression_hepB_model.pkl")
+
 
             # loaded_model = load_model("models/logistic_regression_model.pkl")
             # 1 Die and 2 Live
-            df = pd.read_csv("Dataset/hepatitis.csv")
-            x = df[['age', 'sex', 'steroid', 'antivirals', 'fatigue', 'spiders', 'ascites', 'varices', 'bilirubin',
+        df = pd.read_csv("Dataset/hepatitis.csv")
+        x = df[['age', 'sex', 'steroid', 'antivirals', 'fatigue', 'spiders', 'ascites', 'varices', 'bilirubin',
                     'alk_phosphate', 'sgot', 'albumin', 'protime', 'histology']]
-            feature_names = ['age', 'sex', 'steroid', 'antivirals', 'fatigue', 'spiders', 'ascites', 'varices',
+        feature_names = ['age', 'sex', 'steroid', 'antivirals', 'fatigue', 'spiders', 'ascites', 'varices',
                              'bilirubin', 'alk_phosphate', 'sgot', 'albumin', 'protime', 'histology']
-            class_names = ['Die(1)', 'Live(2)']
-            explainer = lime.lime_tabular.LimeTabularExplainer(x.values, feature_names=feature_names,
+        class_names = ['Die(1)', 'Live(2)']
+        explainer = lime.lime_tabular.LimeTabularExplainer(x.values, feature_names=feature_names,
                                                                class_names=class_names, discretize_continuous=True)
             # The Explainer Instance
-            exp = explainer.explain_instance(np.array(feature_list), loaded_model.predict_proba, num_features=13,
+        exp = explainer.explain_instance(np.array(feature_list), loaded_model.predict_proba, num_features=13,
                                              top_labels=1)
-            exp.show_in_notebook(show_table=True, show_all=False)
+        exp.show_in_notebook(show_table=True, show_all=False)
             # exp.save_to_file('lime_oi.html')
-            st.write(exp.as_list())
-            new_exp = exp.as_list()
-            label_limits = [i[0] for i in new_exp]
+        st.write(exp.as_list())
+        new_exp = exp.as_list()
+        label_limits = [i[0] for i in new_exp]
             # st.write(label_limits)
-            label_scores = [i[1] for i in new_exp]
-            plt.barh(label_limits, label_scores)
-            st.pyplot()
-            plt.figure(figsize=(20, 10))
-            fig = exp.as_pyplot_figure()
-            st.pyplot()
+        label_scores = [i[1] for i in new_exp]
+        plt.barh(label_limits, label_scores)
+        st.pyplot()
+        plt.figure(figsize=(20, 10))
+        fig = exp.as_pyplot_figure()
+        st.pyplot()
 
     st.markdown(
             f"""
@@ -142,9 +130,7 @@ def app():
                           background: #E55D87;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #5FC3E4, #E55D87);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #5FC3E4, #E55D87); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
                       }}
-
                       </style>
                       """,
             unsafe_allow_html=True

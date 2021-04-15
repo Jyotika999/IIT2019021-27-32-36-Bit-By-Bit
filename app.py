@@ -30,7 +30,7 @@ PAGES = {
     #"Correlation matrix": correlation_matrix,
     "Density of attributes": density_of_each_attr,
     "Profiling of Dataset": html_profiling,
-    #"Mortality Prediction": predict,
+    "Mortality Prediction": predict,
     "Models used": info_About_models,
     "About Team: Bit By Bit": about_this_project,
 
