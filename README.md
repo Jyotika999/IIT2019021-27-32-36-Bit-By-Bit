@@ -12,6 +12,12 @@
 * Exploratory DataAnalysis of each attribute on the Dataset
 
 -------------------------------------------------------------------------------------------------------------------------------------------------
+## Demo
+* [Frontend Workflow](https://drive.google.com/file/d/1wiHDJ_9zvLFE8opaE6Ig1aaaMI-a4AJT/view)
+* [Backend Workflow](https://drive.google.com/file/d/1C5DEeCgHXYnc9KxZND1D09qwZo8jq25f/view)
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
 ## Flow of our Software
 ![Workflow](Diagrams/flow.png)
 
